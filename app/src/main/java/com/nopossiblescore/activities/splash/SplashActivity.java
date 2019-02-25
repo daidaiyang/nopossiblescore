@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.nopossiblescore.R;
+import com.nopossiblescore.activities.login.LoginActivity;
 import com.nopossiblescore.activities.main.MainActivity;
 import com.nopossiblescore.mvp.MVPBaseActivity;
 
@@ -48,7 +49,7 @@ public class SplashActivity extends MVPBaseActivity<SplashContract.View, SplashP
         TimerTask timerTask = new TimerTask() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }
