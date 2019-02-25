@@ -1,4 +1,4 @@
-package com.nopossiblescore.main;
+package com.nopossiblescore.activities.splash;
 
 import android.content.Context;
 
@@ -10,7 +10,7 @@ import com.nopossiblescore.mvp.BaseView;
  *  邮箱 784787081@qq.com
  */
 
-public class MainContract {
+public class SplashContract {
     interface View extends BaseView {
         
     }

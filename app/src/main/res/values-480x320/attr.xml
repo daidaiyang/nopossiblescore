@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义圆形边框属性-->
+    <declare-styleable name="roundedimageview">
+        <attr name="border_thickness" format="dimension" />
+        <attr name="border_inside_color" format="color" />
+        <attr name="border_outside_color" format="color"/>
+    </declare-styleable>
+    <!--无间距TextView-->
+    <declare-styleable name="NoPaddingTextView">
+        <attr name="textSize" format="dimension" />
+    </declare-styleable>
+
+</resources>

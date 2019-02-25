@@ -1,4 +1,4 @@
-package com.nopossiblescore.main;
+package com.nopossiblescore.activities.main;
 
 
 import android.os.Bundle;

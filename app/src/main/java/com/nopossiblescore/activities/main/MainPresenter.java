@@ -1,6 +1,5 @@
-package com.nopossiblescore.main;
+package com.nopossiblescore.activities.main;
 
-import android.content.Context;
 
 import com.nopossiblescore.mvp.BasePresenterImpl;
 
