@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:minWidth="@dimen/x576"
+    android:background="@drawable/rect_circle_x29_00"
+    android:layout_height="wrap_content">
+    
+    <ImageView
+        android:layout_width="@dimen/x86"
+        android:layout_height="@dimen/y86"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/x43"
+        android:src="@drawable/notification"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize40"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/x164"
+        android:text="您输入的粮仓码有误"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize40"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/x224"
+        android:layout_marginBottom="@dimen/x46"
+        android:text="请重新输入"/>
+</RelativeLayout>

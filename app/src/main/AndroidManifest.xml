@@ -24,6 +24,8 @@
         <activity android:name=".activities.message.MessageActivity"/>
         <activity android:name=".activities.mine.MineActivity"/>
         <activity android:name=".activities.set.SetActivity"/>
+        <activity android:name=".activities.give.GiveActivity"/>
+        <activity android:name=".activities.record.RecordActivity"/>
     </application>
 
 </manifest>

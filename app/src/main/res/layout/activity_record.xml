@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y167">
+
+        <RadioGroup
+            android:id="@+id/record_rg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y167"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/record_rbAll"
+                android:layout_width="@dimen/x219"
+                android:layout_height="@dimen/x75"
+                android:layout_marginLeft="@dimen/x40"
+                android:background="@drawable/selector_paihang"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="全部"
+                android:textColor="@color/paihang_color_selecter"
+                android:textSize="@dimen/textSize40" />
+
+            <RadioButton
+                android:id="@+id/record_rbGet"
+                android:layout_width="@dimen/x219"
+                android:layout_height="@dimen/x75"
+                android:layout_marginLeft="@dimen/x40"
+                android:background="@drawable/selector_paihang"
+                android:button="@null"
+                android:gravity="center"
+                android:text="每日分粮+"
+                android:textColor="@color/paihang_color_selecter"
+                android:textSize="@dimen/textSize40" />
+
+            <RadioButton
+                android:id="@+id/record_rbGetGive"
+                android:layout_width="@dimen/x219"
+                android:layout_height="@dimen/x75"
+                android:layout_marginLeft="@dimen/x40"
+                android:background="@drawable/selector_paihang"
+                android:button="@null"
+                android:gravity="center"
+                android:text="获得赠送+"
+                android:textColor="@color/paihang_color_selecter"
+                android:textSize="@dimen/textSize40" />
+
+            <RadioButton
+                android:id="@+id/record_rbGive"
+                android:layout_width="@dimen/x219"
+                android:layout_height="@dimen/x75"
+                android:layout_marginLeft="@dimen/x40"
+                android:background="@drawable/selector_paihang"
+                android:button="@null"
+                android:gravity="center"
+                android:text="赠送他人-"
+                android:textColor="@color/paihang_color_selecter"
+                android:textSize="@dimen/textSize40" />
+
+        </RadioGroup>
+
+    </HorizontalScrollView>
+
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/record_bga"
+        android:layout_width="match_parent"
+        android:background="@color/backgrould_f2"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x23"
+                android:background="@color/backgrould_f2" />
+
+            <LinearLayout
+                android:id="@+id/record_nodata"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/x200"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="@dimen/x242"
+                    android:layout_height="@dimen/y144"
+                    android:src="@drawable/nodata"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSize35"
+                    android:textColor="@color/text_black_99"
+                    android:layout_marginTop="@dimen/x40"
+                    android:text="暂无相关记录"/>
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/record_recy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+</LinearLayout>
