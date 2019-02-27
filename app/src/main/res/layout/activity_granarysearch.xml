@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/include_title"/>
+
+    <EditText
+        android:id="@+id/search_code"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y115"
+        android:gravity="center_vertical"
+        android:background="@drawable/rect_circle_x14_cc_kuang"
+        android:layout_marginLeft="@dimen/x40"
+        android:layout_marginRight="@dimen/x40"
+        android:textSize="@dimen/textSize40"
+        android:textColor="@color/black"
+        android:textColorHint="@color/text_black_99"
+        android:paddingLeft="@dimen/x23"
+        android:layout_marginTop="@dimen/x46"
+        android:hint="请输入要查询的粮仓码"
+        />
+
+    <TextView
+        android:id="@+id/search_search"
+        android:layout_width="@dimen/x461"
+        android:layout_height="@dimen/y98"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@drawable/rect_circle_x49_jianbian"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x45"
+        android:text="查询"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textSize40"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x35"
+        android:includeFontPadding="false"
+        android:text="粮草(石)"/>
+    <TextView
+        android:id="@+id/search_toatal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textSize40"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x40"
+        android:layout_marginBottom="@dimen/x80"
+        android:includeFontPadding="false"
+        android:text="- -"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x23"
+        android:background="@color/backgrould_f2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y127"
+        android:textSize="@dimen/textSize46"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/x40"
+        android:gravity="center_vertical"
+        android:text="粮仓记录"/>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/x86"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="@dimen/x242"
+            android:layout_height="@dimen/y144"
+            android:src="@drawable/nodata"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSize35"
+            android:textColor="@color/text_black_99"
+            android:includeFontPadding="false"
+            android:layout_marginTop="@dimen/x58"
+            android:text="暂无相关记录，请先输入要查询的粮仓码"/>
+
+    </LinearLayout>
+
+
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/search_bga"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/search_recy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+</LinearLayout>

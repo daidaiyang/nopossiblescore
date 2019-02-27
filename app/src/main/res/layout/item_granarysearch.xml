@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x20"
+        android:background="@drawable/rect_circle_x14_white"
+        android:layout_marginBottom="@dimen/x10"
+        android:id="@+id/item_granary_root">
+
+        <TextView
+            android:id="@+id/item_granary_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSize35"
+            android:textColor="@color/text_black_66"
+            android:layout_marginLeft="@dimen/x35"
+            android:layout_marginTop="@dimen/x30"
+            android:layout_marginBottom="@dimen/x30"
+            android:text="2019-01-19 12:44:10"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x3"
+            android:background="@color/backgrould_f2"/>
+        <TextView
+            android:id="@+id/item_granary_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSize40"
+            android:textColor="@color/black"
+            android:includeFontPadding="false"
+            android:layout_marginTop="@dimen/x40"
+            android:layout_marginLeft="@dimen/x35"
+            android:text="赠送粮草给："/>
+
+        <LinearLayout
+            android:id="@+id/item_granary_code_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/x25">
+
+            <TextView
+                android:id="@+id/item_granary_code"
+                android:layout_width="wrap_content"
+                android:maxWidth="@dimen/x829"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textSize40"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_marginLeft="@dimen/x35"
+                android:text="wreWERERWuiiiuii34435436556sdf45ff4sf1aasdadsadada"/>
+            <TextView
+                android:id="@+id/item_granary_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textSize40"
+                android:textColor="@color/text_black_ff"
+                android:layout_marginRight="@dimen/x35"
+                android:layout_marginLeft="@dimen/x35"
+                android:text="复制"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x35"
+            android:layout_marginRight="@dimen/x35"
+            android:layout_marginTop="@dimen/x30"
+            android:layout_marginBottom="@dimen/x40"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/item_granary_num1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textSize52"
+                android:textColor="@color/text_black_b2f"
+                android:includeFontPadding="false"
+                android:text="+456"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textSize35"
+                android:textColor="@color/black"
+                android:includeFontPadding="false"
+                android:text="石"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textSize35"
+                android:textColor="@color/black"
+                android:includeFontPadding="false"
+                android:text="余"/>
+            <TextView
+                android:id="@+id/item_granary_num2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textSize52"
+                android:textColor="@color/black"
+                android:includeFontPadding="false"
+                android:text="452,147"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textSize35"
+                android:textColor="@color/black"
+                android:includeFontPadding="false"
+                android:text="石"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

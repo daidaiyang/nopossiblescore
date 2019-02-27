@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y127">
+
+        <ImageView
+            android:id="@+id/mine_home"
+            android:layout_width="@dimen/x98"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/x40"
+            android:src="@drawable/home" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的粮仓"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize52" />
+
+
+        <ImageView
+            android:id="@+id/mine_set"
+            android:layout_width="@dimen/x98"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:paddingRight="@dimen/x40"
+            android:src="@drawable/set" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/y58"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/x156"
+                    android:layout_height="@dimen/y156"
+                    android:layout_marginLeft="@dimen/x40"
+                    android:src="@color/colorPrimary" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x225"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="汉庭酒店"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/x63"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x20"
+                        android:includeFontPadding="false"
+                        android:text="18888888888" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y288"
+                android:layout_marginLeft="@dimen/x40"
+                android:layout_marginTop="@dimen/x40"
+                android:layout_marginRight="@dimen/x40"
+                android:background="@drawable/granary_background"
+                android:padding="@dimen/x35">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x30"
+                    android:includeFontPadding="false"
+                    android:text="我的粮仓码"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x46" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/x15"
+                    android:includeFontPadding="false"
+                    android:text="粮仓记录"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x120"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="rtrWERERWuiiiuii34435436556"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x30"
+                        android:background="@drawable/rect_circle_x6_white_kuang"
+                        android:paddingLeft="@dimen/x19"
+                        android:paddingTop="@dimen/x5"
+                        android:paddingRight="@dimen/x19"
+                        android:paddingBottom="@dimen/x5"
+                        android:text="复制"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize35" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x40"
+                android:layout_marginTop="@dimen/x40"
+                android:layout_marginRight="@dimen/x40"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="粮仓当前存储的粮草(石)"
+                    android:textColor="@color/text_black_99"
+                    android:textSize="@dimen/textSize35" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="统计于2019-01-13 14:45"
+                    android:textColor="@color/text_black_99"
+                    android:textSize="@dimen/textSize35" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x40"
+                android:layout_marginTop="@dimen/x15"
+                android:layout_marginRight="@dimen/x40"
+                android:layout_marginBottom="@dimen/x37">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:text="45,342.3215465"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="@dimen/x230"
+                    android:layout_height="@dimen/y98"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/rect_circle_x49_f7"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="赠送他人"
+                    android:textColor="@color/text_black_ff" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x20"
+                android:background="@color/backgrould_f2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x58"
+                        android:layout_marginTop="@dimen/x58"
+                        android:text="收支分析"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/x46" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:paddingLeft="@dimen/x20"
+                        android:paddingRight="@dimen/x20"
+                        android:layout_marginRight="@dimen/x58"
+                        android:paddingTop="@dimen/x10"
+                        android:paddingBottom="@dimen/x10"
+                        android:background="#1786FF"
+                        android:text="2019.01.08-2019.01.14"/>
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x58"
+                    android:layout_marginTop="@dimen/x30"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/x127"
+                        android:layout_height="@dimen/x23"
+                        android:background="@drawable/rect_circle_x12_2cc"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textSize35"
+                        android:layout_marginLeft="@dimen/x15"
+                        android:textColor="@color/black"
+                        android:text="收"/>
+
+                    <View
+                        android:layout_width="@dimen/x127"
+                        android:layout_height="@dimen/x23"
+                        android:layout_marginLeft="@dimen/x58"
+                        android:background="@drawable/rect_circle_x12_b2f"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textSize35"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="@dimen/x15"
+                        android:text="支"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x10"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <com.nopossiblescore.customview.LineChartView
+                    android:id="@+id/mine_zhexian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/y735" />
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

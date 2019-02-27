@@ -40,4 +40,6 @@ dependencies {
     implementation 'cn.bingoogolapple:bga-refreshlayout:1.1.8'
     //banner
     implementation 'com.youth.banner:banner:1.4.10'  //最新版本
+    //eventBus
+    implementation 'org.greenrobot:eventbus:3.1.1'
 }

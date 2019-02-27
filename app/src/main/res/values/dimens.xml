@@ -7,7 +7,11 @@
     <dimen name="textSize27">@dimen/x27</dimen>
     <dimen name="textSize31">@dimen/x31</dimen>
     <dimen name="textSize35">@dimen/x35</dimen>
+    <dimen name="textSize37">@dimen/x37</dimen>
+    <dimen name="textSize40">@dimen/x40</dimen>
     <dimen name="textSize42">@dimen/x42</dimen>
     <dimen name="textSize46">@dimen/x46</dimen>
     <dimen name="textSize95">@dimen/x95</dimen>
+    <dimen name="textSize52">@dimen/x52</dimen>
+    <dimen name="textSize63">@dimen/x63</dimen>
 </resources>

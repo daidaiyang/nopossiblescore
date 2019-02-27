@@ -41,8 +41,9 @@
         android:orientation="vertical">
 
         <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="@dimen/x30"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/y202">
+            android:layout_height="@dimen/y172">
 
             <EditText
                 android:id="@+id/login_username"
@@ -73,7 +74,8 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="0dp"
-                android:layout_height="@dimen/y202"
+                android:layout_height="@dimen/y172"
+                android:layout_marginTop="@dimen/x30"
                 android:layout_weight="1">
 
                 <EditText

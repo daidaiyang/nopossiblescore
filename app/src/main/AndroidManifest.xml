@@ -20,6 +20,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.login.LoginActivity"/>
+        <activity android:name=".activities.granarysearch.GranarysearchActivity"/>
+        <activity android:name=".activities.message.MessageActivity"/>
+        <activity android:name=".activities.mine.MineActivity"/>
+        <activity android:name=".activities.set.SetActivity"/>
     </application>
 
 </manifest>

@@ -1,18 +1,262 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/login_qian"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@color/white"
+        android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y127"
+            android:background="@color/login_qian">
+
+            <ImageView
+                android:id="@+id/main_mine"
+                android:layout_width="@dimen/x98"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/x40"
+                android:src="@drawable/mine" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="粮库"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize52" />
+
+            <FrameLayout
+                android:id="@+id/main_message"
+                android:layout_width="@dimen/x58"
+                android:layout_height="@dimen/x58"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x154">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/message" />
+
+                <View
+                    android:id="@+id/main_message_circle"
+                    android:layout_width="@dimen/x14"
+                    android:layout_height="@dimen/x14"
+                    android:layout_gravity="right"
+                    android:background="@drawable/circle_x14_33" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/main_search"
+                android:layout_width="@dimen/x98"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:paddingRight="@dimen/x40"
+                android:src="@drawable/search" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1437"
+            android:background="@drawable/rect_circle_x29_zhexian"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/main_freshTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x58"
+                android:layout_marginTop="@dimen/x58"
+                android:includeFontPadding="false"
+                android:text="今日公示(数据更新于12-05 12:00)"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize35" />
+
+            <TextView
+                android:id="@+id/main_proportion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x58"
+                android:layout_marginTop="@dimen/x15"
+                android:includeFontPadding="false"
+                android:text="1:4560"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize95"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x50">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x58"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="总积分(个)"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize35" />
+
+                    <TextView
+                        android:id="@+id/main_allScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x25"
+                        android:includeFontPadding="false"
+                        android:text="4154821"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize63"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x465"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分发粮草(石)"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize35" />
+
+                    <TextView
+                        android:id="@+id/main_allForage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x25"
+                        android:includeFontPadding="false"
+                        android:text="10000"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize63"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/x58"
+                android:layout_marginTop="@dimen/x75"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="积分换粮草趋势图"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize46" />
+
+                <TextView
+                    android:id="@+id/main_time_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x58"
+                    android:textColor="@color/login_start"
+                    android:background="@drawable/rect_circle_x6_white"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="@dimen/x58"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x15"
+                    android:paddingRight="@dimen/x15"
+                    android:includeFontPadding="false"
+                    android:text="2019.01.08-2019.01.14"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x58"
+                android:layout_marginTop="@dimen/x25"
+                android:includeFontPadding="false"
+                android:text="数字表示当天1石粮食对应的积分数量"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize35" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x10"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <com.nopossiblescore.customview.LineChartView
+                    android:id="@+id/main_zhexian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/y735" />
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="@dimen/x507"
+            android:layout_height="@dimen/y100"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x35"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/paihang_button" />
+
+            <RadioGroup
+                android:id="@+id/main_rg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/main_rbToday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_paihang"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="今日排行"
+                    android:textColor="@color/paihang_color_selecter" />
+
+                <RadioButton
+                    android:id="@+id/main_rbAll"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_paihang"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="总排行"
+                    android:textColor="@color/paihang_color_selecter" />
+            </RadioGroup>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/main_recy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/x14" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</ScrollView>

@@ -6,12 +6,42 @@
 
 
     <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="translate">#00ffffff</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="black_50">#8d000000</color>
+
+    <color name="backgrould_f2">#F2F2F2</color>
 
     <color name="login_qian">#00BAFF</color>
     <color name="login_start">#1786FF</color>
     <color name="login_end">#00BAFF</color>
 
     <color name="line_dd">#dddddd</color>
+    <color name="red_33">#FF3333</color>
 
     <color name="login_shadow">#1786FF</color>
+    <color name="message_circle">#FF3333</color>
+    <color name="text_black">#000000</color>
+    <color name="text_black_33">#333333</color>
+    <color name="text_black_66">#666666</color>
+    <color name="text_black_cc">#cccccc</color>
+    <color name="text_black_0f">#F5AA0F</color>
+    <color name="text_black_0b">#0F050B</color>
+    <color name="text_black_99">#999999</color>
+    <color name="text_black_69">#696969</color>
+    <color name="text_black_ee">#EEEEEE</color>
+    <color name="text_black_31">#313131</color>
+    <color name="text_black_f2">#F2F2F2</color>
+    <color name="text_black_dd">#DDDDDD</color>
+    <color name="text_black_e6">#1B61E6</color>
+    <color name="text_black_1b">#E61B1B</color>
+    <color name="text_black_ff">#1786FF</color>
+    <color name="text_black_b2f">#F86B2F</color>
+    <color name="text_black_2cc">#42E2CC</color>
+    <color name="text_black_f7">#F2F3F7</color>
+    <color name="text_price">#FF0000</color>
+    <color name="text_price2">#EC0000</color>
+    <color name="back_2cc">#42E2CC</color>
+    <color name="back_b2f">#F86B2F</color>
 </resources>

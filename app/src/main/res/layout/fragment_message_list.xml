@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/backgrould_f2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/message_list_bga"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x30"
+            android:background="@color/backgrould_f2"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/message_list_recy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        </LinearLayout>
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+
+</LinearLayout>
