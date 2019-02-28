@@ -272,6 +272,27 @@
 
                 </LinearLayout>
             </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x40"
+                android:layout_marginBottom="@dimen/x50"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.nopossiblescore.customview.TwoLineChartView
+                        android:id="@+id/line_chart_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/y735"/>
+                </LinearLayout>
+
+            </HorizontalScrollView>
         </LinearLayout>
     </ScrollView>
 

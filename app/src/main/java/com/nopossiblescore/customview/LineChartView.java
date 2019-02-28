@@ -27,10 +27,12 @@ import java.util.List;
 
 public class LineChartView extends View {
 
-    private Paint linePaint;//曲线画笔
-    private Paint pointPaint;//曲线上锚点画笔
-    private Paint textPointPaint;//曲线上锚点文本画笔
-    private Path linePath;//曲线路径
+    private boolean isBezierLine = false;
+    private boolean isInitialized = false;
+    private boolean isPlayAnim = false;
+    private ValueAnimator valueAnimator;
+    private float currentValue = 0f;
+    private boolean isAnimating = false;
     private int mWidth, mHeight;
     private List<Data> dataList = new ArrayList<>();
     private List<String> data = new ArrayList<>();
@@ -39,34 +41,42 @@ public class LineChartView extends View {
     private int stepEnd;
     private int stepSpace;
     private int stepSpaceDefault = 50;
-
-
     private int stepSpaceDP = stepSpaceDefault;//item宽度默认dp
     private int topSpace, bottomSpace;
     private int tablePadding;
     private int tablePaddingDP = 20;//view四周padding默认dp
     private int maxValue, minValue;
     private int rulerValuePadding;//刻度单位与轴的间距
-    private int rulerValuePaddingDP = 30;//刻度单位与轴的间距默认dp
+    private int rulerValuePaddingDP = 20;//刻度单位与轴的间距默认dp
     private float heightPercent = 0.618f;
-
-    private int lineColor = Color.parseColor("#000000");//曲线颜色
-    private float lineWidthDP = 10.0f;//曲线宽度dp
-
     private int pointColor = Color.parseColor("#66ccff");//锚点颜色
     private float pointWidthDefault = 8f;
     private float pointWidthDP = pointWidthDefault;//锚点宽度dp
 
 
-    private int pointTextColor = Color.parseColor("#ffffff");//锚点文本颜色
-    private float pointTextSizeSP = 10f;//锚点文本大小
 
-    private boolean isBezierLine = false;
-    private boolean isInitialized = false;
-    private boolean isPlayAnim = false;
-    private ValueAnimator valueAnimator;
-    private float currentValue = 0f;
-    private boolean isAnimating = false;
+
+
+
+
+    private Paint linePaint;//曲线画笔
+    private Paint pointPaint;//曲线上锚点画笔
+    private Paint textPointPaint;//曲线上锚点文本画笔
+    private Path linePath;//曲线路径
+    private Path linePath2;//曲线路径2
+
+    private int lineColor = Color.parseColor("#000000");//曲线颜色
+    private float lineWidthDP = 8.0f;//曲线宽度dp
+
+    private int pointTextColor = Color.parseColor("#ffffff");//锚点文本颜色
+    private float pointTextSizeSP = 8f;//锚点文本大小
+
+    private boolean isTwoPath = false;
+
+    public void setTwoPath(boolean twoPath) {
+        isTwoPath = twoPath;
+    }
+
 
     public LineChartView(Context context) {
         this(context, null);
@@ -105,7 +115,7 @@ public class LineChartView extends View {
         textPointPaint.setTextSize(sp2px(pointTextSizeSP));//字体大小
         //线-路径
         linePath = new Path();
-
+        linePath2 = new Path();
         resetParam();
     }
 
@@ -141,6 +151,7 @@ public class LineChartView extends View {
 
     private void resetParam() {
         linePath.reset();
+        linePath2.reset();
         stepSpace = dip2px(stepSpaceDP);
         tablePadding = dip2px(tablePaddingDP);
         rulerValuePadding = dip2px(rulerValuePaddingDP);
@@ -181,7 +192,6 @@ public class LineChartView extends View {
         super.onDraw(canvas);
         canvas.drawColor(Color.TRANSPARENT);//绘制背景颜色
         canvas.translate(0f, mHeight / 2f + (getViewDrawHeight() + topSpace + bottomSpace) / 2f);//设置画布中心点垂直居中
-
         if (!isInitialized) {
             setupLine();
         }
@@ -190,6 +200,7 @@ public class LineChartView extends View {
     }
 
     private void drawText(Canvas canvas, Paint textPaint, String text,String text2, float x, float y) {
+
         canvas.drawText(text, x, y, textPaint);
         canvas.drawText(text2,x,dip2px(20),textPaint);
     }
@@ -205,7 +216,7 @@ public class LineChartView extends View {
      */
     private void drawLinePointText(Canvas canvas, String text,String text2, float x, float y) {
         textPointPaint.setTextAlign(Paint.Align.CENTER);
-        float newY = y+10f;
+        float newY = y+8f;
         drawText(canvas, textPointPaint, text,text2, x, newY);
     }
 
@@ -289,7 +300,6 @@ public class LineChartView extends View {
      */
     private void setupLine() {
         if (dataList.isEmpty()) return;
-
         int stepTemp = getTableStart();
         Point pre = new Point();
         pre.set(stepTemp, -getValueHeight(dataList.get(0).getValue()));//坐标系从0,0默认在第四象限绘制

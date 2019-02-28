@@ -12,8 +12,11 @@ import com.nopossiblescore.R;
 import com.nopossiblescore.activities.give.GiveActivity;
 import com.nopossiblescore.activities.record.RecordActivity;
 import com.nopossiblescore.activities.set.SetActivity;
-import com.nopossiblescore.customview.LineChartView;
+import com.nopossiblescore.customview.TwoLineChartView;
 import com.nopossiblescore.mvp.MVPBaseActivity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -50,6 +53,8 @@ public class MineActivity extends MVPBaseActivity<MineContract.View, MinePresent
     TextView mineGive;
     @BindView(R.id.mine_record)
     TextView mineRecord;
+    @BindView(R.id.line_chart_view)
+    TwoLineChartView lineChartView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -60,10 +65,38 @@ public class MineActivity extends MVPBaseActivity<MineContract.View, MinePresent
     }
 
     private void initView() {
-
+        List<TwoLineChartView.Data> datas1 = new ArrayList<>();
+        List<TwoLineChartView.Data> datas2 = new ArrayList<>();
+        List<String> data3 = new ArrayList<>();
+        datas1.add(new TwoLineChartView.Data(23));
+        datas1.add(new TwoLineChartView.Data(49));
+        datas1.add(new TwoLineChartView.Data(41));
+        datas1.add(new TwoLineChartView.Data(44));
+        datas1.add(new TwoLineChartView.Data(36));
+        datas1.add(new TwoLineChartView.Data(46));
+        datas1.add(new TwoLineChartView.Data(54));
+        datas1.add(new TwoLineChartView.Data(54));
+        datas2.add(new TwoLineChartView.Data(23));
+        datas2.add(new TwoLineChartView.Data(39));
+        datas2.add(new TwoLineChartView.Data(0));
+        datas2.add(new TwoLineChartView.Data(33));
+        datas2.add(new TwoLineChartView.Data(43));
+        datas2.add(new TwoLineChartView.Data(41));
+        datas2.add(new TwoLineChartView.Data(45));
+        datas2.add(new TwoLineChartView.Data(45));
+        data3.add("01.08");
+        data3.add("01.09");
+        data3.add("01.10");
+        data3.add("01.11");
+        data3.add("01.12");
+        data3.add("01.13");
+        data3.add("01.14");
+        data3.add("01.15");
+        lineChartView.setData(datas1,datas2,data3);
+        lineChartView.playAnim();
     }
 
-    @OnClick({R.id.mine_home, R.id.mine_set, R.id.mine_copy, R.id.mine_give,R.id.mine_record})
+    @OnClick({R.id.mine_home, R.id.mine_set, R.id.mine_copy, R.id.mine_give, R.id.mine_record})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.mine_home:
