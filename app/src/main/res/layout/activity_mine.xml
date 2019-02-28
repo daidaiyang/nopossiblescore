@@ -224,6 +224,7 @@
                         android:textSize="@dimen/x46" />
 
                     <TextView
+                        android:id="@+id/mine_range"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"

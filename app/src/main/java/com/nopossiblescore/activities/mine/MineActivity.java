@@ -13,6 +13,7 @@ import com.nopossiblescore.activities.give.GiveActivity;
 import com.nopossiblescore.activities.record.RecordActivity;
 import com.nopossiblescore.activities.set.SetActivity;
 import com.nopossiblescore.customview.TwoLineChartView;
+import com.nopossiblescore.dialog.MainDataDialog;
 import com.nopossiblescore.mvp.MVPBaseActivity;
 
 import java.util.ArrayList;
@@ -28,7 +29,7 @@ import butterknife.OnClick;
  * 邮箱 784787081@qq.com
  */
 
-public class MineActivity extends MVPBaseActivity<MineContract.View, MinePresenter> implements MineContract.View {
+public class MineActivity extends MVPBaseActivity<MineContract.View, MinePresenter> implements MineContract.View, MainDataDialog.OnConfirClickListener {
 
 
     @BindView(R.id.mine_home)
@@ -55,6 +56,10 @@ public class MineActivity extends MVPBaseActivity<MineContract.View, MinePresent
     TextView mineRecord;
     @BindView(R.id.line_chart_view)
     TwoLineChartView lineChartView;
+    @BindView(R.id.mine_range)
+    TextView mineRange;
+
+    private MainDataDialog mainDataDialog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -65,6 +70,8 @@ public class MineActivity extends MVPBaseActivity<MineContract.View, MinePresent
     }
 
     private void initView() {
+        mainDataDialog = new MainDataDialog(getContext());
+        mainDataDialog.setOnConfirClickListener(this);
         List<TwoLineChartView.Data> datas1 = new ArrayList<>();
         List<TwoLineChartView.Data> datas2 = new ArrayList<>();
         List<String> data3 = new ArrayList<>();
@@ -92,11 +99,11 @@ public class MineActivity extends MVPBaseActivity<MineContract.View, MinePresent
         data3.add("01.13");
         data3.add("01.14");
         data3.add("01.15");
-        lineChartView.setData(datas1,datas2,data3);
+        lineChartView.setData(datas1, datas2, data3);
         lineChartView.playAnim();
     }
 
-    @OnClick({R.id.mine_home, R.id.mine_set, R.id.mine_copy, R.id.mine_give, R.id.mine_record})
+    @OnClick({R.id.mine_home, R.id.mine_set, R.id.mine_copy, R.id.mine_give, R.id.mine_record,R.id.mine_range})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.mine_home:
@@ -116,6 +123,15 @@ public class MineActivity extends MVPBaseActivity<MineContract.View, MinePresent
                 Intent recordIntent = new Intent(MineActivity.this, RecordActivity.class);
                 startActivity(recordIntent);
                 break;
+            case R.id.mine_range:
+                mainDataDialog.initView();
+                mainDataDialog.show();
+                break;
         }
+    }
+
+    @Override
+    public void onConfirListener(View view, String result) {
+
     }
 }
