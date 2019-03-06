@@ -22,7 +22,6 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * Created by jeanboy on 2017/6/12.
  */
 
 public class LineChartView extends View {
