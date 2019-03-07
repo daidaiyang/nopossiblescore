@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 
+import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
+import com.ygs.rxretrofitlibrary.retrofit_rx.http.HttpManager;
+
 import java.lang.reflect.ParameterizedType;
 
 /**
@@ -14,6 +17,7 @@ import java.lang.reflect.ParameterizedType;
 
 public abstract class MVPBaseFragment<V extends BaseView,T extends BasePresenterImpl<V>> extends Fragment implements BaseView{
     public T mPresenter;
+    private HttpManager manager = HttpManager.getInstance();
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +30,15 @@ public abstract class MVPBaseFragment<V extends BaseView,T extends BasePresenter
         super.onDestroy();
         if (mPresenter!=null)
             mPresenter.detachView();
+    }
+    @Override
+    public HttpManager getManager() {
+        return manager;
+    }
+
+    @Override
+    public RxAppCompatActivity getThis() {
+        return (RxAppCompatActivity) getActivity();
     }
 
     @Override

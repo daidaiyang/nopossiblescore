@@ -53,8 +53,9 @@ public class LoginActivity extends MVPBaseActivity<LoginContract.View, LoginPres
 
     @OnClick(R.id.login)
     public void onViewClicked() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        this.finish();
+        mPresenter.login("","");
+//        Intent intent = new Intent(this, MainActivity.class);
+//        startActivity(intent);
+//        this.finish();
     }
 }

@@ -13,6 +13,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 import com.nopossiblescore.R;
+import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
+import com.ygs.rxretrofitlibrary.retrofit_rx.http.HttpManager;
 
 import java.lang.reflect.ParameterizedType;
 
@@ -22,12 +24,13 @@ import java.lang.reflect.ParameterizedType;
  *  邮箱 784787081@qq.com
  */
 
-public abstract class MVPBaseActivity<V extends BaseView,T extends BasePresenterImpl<V>> extends AppCompatActivity implements BaseView{
+public abstract class MVPBaseActivity<V extends BaseView,T extends BasePresenterImpl<V>> extends BaseActivity implements BaseView{
     public T mPresenter;
     /**
      * 简单的退出和跳转动画
      */
     private boolean animCon = true;
+    public HttpManager manager = HttpManager.getInstance();
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +39,16 @@ public abstract class MVPBaseActivity<V extends BaseView,T extends BasePresenter
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE |
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+    }
+
+    @Override
+    public RxAppCompatActivity getThis() {
+        return this;
+    }
+
+    @Override
+    public HttpManager getManager() {
+        return manager;
     }
 
     @Override
